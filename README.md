@@ -26,23 +26,34 @@ This skill operates on that processing itself. It encodes principles like:
 
 ## Install
 
-Copy the `zero-point` directory into your Claude Code skills folder:
+**1. Clone this repo**
 
 ```bash
-cp -r zero-point ~/.claude/skills/superpowers/
+git clone https://github.com/danielabrahamx/cero-punto.git
 ```
 
-Restart Claude Code. The skill will be available as `superpowers:zero-point`.
+**2. Copy the skill into your Claude Code skills directory**
+
+```bash
+mkdir -p ~/.claude/skills/superpowers
+cp -r cero-punto/zero-point ~/.claude/skills/superpowers/
+```
+
+**3. Restart Claude Code**
+
+The skill will be available as `superpowers:zero-point`.
+
+---
 
 ### Make it ambient (recommended)
 
-To have it active in every session without invocation, add to your `~/.claude/CLAUDE.md`:
+To have it active in every session without needing to invoke it, add this line to your `~/.claude/CLAUDE.md` (create the file if it doesn't exist):
 
 ```
 @~/.claude/skills/superpowers/zero-point/SKILL.md
 ```
 
-Or embed the principles directly — the skill reads as a reorientation, not a procedure, so it works as ambient context.
+This loads the reorientation into every conversation automatically.
 
 ## Usage
 
